@@ -2,4 +2,5 @@
     <string name="app_name">CleanArcExample</string>
     <string name="title_feature_login">FeatureLogin</string>
     <string name="title_feature_home">FeatureHome</string>
+    <string name="btn_change">Ir para Feature Home</string>
 </resources>

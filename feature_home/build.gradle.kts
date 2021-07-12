@@ -1,6 +1,7 @@
 plugins {
     id("com.android.dynamic-feature")
     id("kotlin-android")
+    id("kotlin-kapt")
 }
 android {
     compileSdkVersion(30)
@@ -16,6 +17,10 @@ android {
         testInstrumentationRunner = AndroidConfig.TEST_INSTRUMENTATION_RUNNER
     }
 
+    viewBinding.apply {
+        isEnabled = true
+    }
+
     buildTypes {
 
         getByName(BuildType.RELEASE) {
@@ -26,5 +31,5 @@ android {
 }
 
 dependencies {
-    implementation(project(GradleDeps.MAIN_APP_PROJECT))
+    api(project(GradleDeps.MAIN_APP_PROJECT))
 }

@@ -1,6 +1,10 @@
 plugins {
     id("com.android.application")
     id("kotlin-android")
+    id("kotlin-kapt")
+    id("androidx.navigation.safeargs.kotlin")
+
+
 }
 
 android {
@@ -18,6 +22,10 @@ android {
         versionName = AndroidConfig.VERSION_NAME
 
         testInstrumentationRunner = AndroidConfig.TEST_INSTRUMENTATION_RUNNER
+    }
+
+    buildFeatures {
+        viewBinding = true
     }
 
     buildTypes {
@@ -41,13 +49,13 @@ android {
 dependencies {
 
 
-    implementation(AppDependencies.kotlin)
-    implementation(AppDependencies.androidAppCompat)
-    implementation(AppDependencies.androidMaterial)
-    implementation(AppDependencies.androidXCore)
-    implementation(AppDependencies.navigationFragment)
-    implementation(AppDependencies.navigationDynamic)
-    implementation(AppDependencies.navigationUI)
+    api(AppDependencies.kotlin)
+    api(AppDependencies.androidAppCompat)
+    api(AppDependencies.androidMaterial)
+    api(AppDependencies.androidXCore)
+    api(AppDependencies.navigationFragment)
+    api(AppDependencies.navigationDynamic)
+    api(AppDependencies.navigationUI)
 
     testImplementation(AppDependencies.testLibs.jUnit4)
     testImplementation(AppDependencies.testLibs.testExt)

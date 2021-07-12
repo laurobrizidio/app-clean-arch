@@ -1,3 +1,4 @@
 rootProject.name = "CleanArcExample"
 include ':app'
 include ':feature_home'
+include ':Commons'
